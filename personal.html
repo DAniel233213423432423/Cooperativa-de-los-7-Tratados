@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Personal</title>
+    <style>
+        /* Configuración básica */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background: linear-gradient(to right, #ff758c, #ff6b6b, #ff9770);
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px #333;
+        }
+
+        .organigram-container {
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        .branch {
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            border: 2px dashed rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .branch h2 {
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            display: inline-block;
+            text-shadow: 2px 2px #333;
+            font-size: 1.5em;
+        }
+
+        .members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .member {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .member p {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+
+        /* Fondo animado con burbujas */
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: float 10s infinite ease-in-out;
+            pointer-events: none;
+        }
+
+        .bubble:nth-child(1) {
+            width: 120px;
+            height: 120px;
+            bottom: -150px;
+            left: 10%;
+            animation-duration: 12s;
+        }
+
+        .bubble:nth-child(2) {
+            width: 80px;
+            height: 80px;
+            bottom: -100px;
+            left: 50%;
+            animation-duration: 15s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            bottom: -120px;
+            left: 75%;
+            animation-duration: 18s;
+        }
+
+        .bubble:nth-child(4) {
+            width: 100px;
+            height: 100px;
+            bottom: -90px;
+            left: 20%;
+            animation-duration: 20s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translateY(-200px) scale(1.2);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-400px) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <h1>Organigrama de Nuestro Personal</h1>
+    <div class="organigram-container">
+        <!-- Asamblea General -->
+        <div class="branch">
+            <h2>Asamblea General</h2>
+            <div class="members">
+                <div class="member"><p>Dylan A.</p></div>
+                <div class="member"><p>Landor M.</p></div>
+                <div class="member"><p>Anthony B.</p></div>
+                <div class="member"><p>Matías L.</p></div>
+            </div>
+        </div>
+
+        <!-- Consejo Administrativo -->
+        <div class="branch">
+            <h2>Consejo Administrativo</h2>
+            <div class="members">
+                <div class="member"><p>Natasha P.</p></div>
+                <div class="member"><p>Adrián C.</p></div>
+                <div class="member"><p>Emily P.</p></div>
+            </div>
+        </div>
+
+        <!-- Gerente General -->
+        <div class="branch">
+            <h2>Gerente General</h2>
+            <div class="members">
+                <div class="member"><p>Daniel M.</p></div>
+            </div>
+        </div>
+
+        <!-- Comité de Auditoría -->
+        <div class="branch">
+            <h2>Comité de Auditoría</h2>
+            <div class="members">
+                <div class="member"><p>Estefanía S.</p></div>
+                <div class="member"><p>Anahi Ll.</p></div>
+            </div>
+        </div>
+
+        <!-- Comité de Crédito -->
+        <div class="branch">
+            <h2>Comité de Crédito</h2>
+            <div class="members">
+                <div class="member"><p>Angélica L.</p></div>
+                <div class="member"><p>Daniela H.</p></div>
+            </div>
+        </div>
+
+        <!-- Área de Educación y Capacitación -->
+        <div class="branch">
+            <h2>Área de Educación y Capacitación</h2>
+            <div class="members">
+                <div class="member"><p>Jonathan C.</p></div>
+                <div class="member"><p>Joel T.</p></div>
+            </div>
+        </div>
+
+        <!-- Área de Finanzas y Contabilidad -->
+        <div class="branch">
+            <h2>Área de Finanzas y Contabilidad</h2>
+            <div class="members">
+                <div class="member"><p>Sandro C.</p></div>
+            </div>
+        </div>
+
+        <!-- Área de Marketing y Comunicación -->
+        <div class="branch">
+            <h2>Área de Marketing y Comunicación</h2>
+            <div class="members">
+                <div class="member"><p>Isaías I.</p></div>
+            </div>
+        </div>
+
+        <!-- Área de Atención al Socio -->
+        <div class="branch">
+            <h2>Área de Atención al Socio</h2>
+            <div class="members">
+                <div class="member"><p>Junior P.</p></div>
+            </div>
+        </div>
+
+        <!-- Área de Gestión de Créditos -->
+        <div class="branch">
+            <h2>Área de Gestión de Créditos</h2>
+            <div class="members">
+                <div class="member"><p>Camila H.</p></div>
+                <div class="member"><p>Leyton M.</p></div>
+            </div>
+        </div>
+
+        <!-- Área de Cobranzas -->
+        <div class="branch">
+            <h2>Área de Cobranzas</h2>
+            <div class="members">
+                <div class="member"><p>Xavier T.</p></div>
+                <div class="member"><p>Lucia T.</p></div>
+            </div>
+        </div>
+
+        <!-- Área de Promoción Comunitaria -->
+        <div class="branch">
+            <h2>Área de Promoción Comunitaria</h2>
+            <div class="members">
+                <div class="member"><p>Freddy C.</p></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
